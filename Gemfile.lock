@@ -80,6 +80,7 @@ GEM
     erubi (1.12.0)
     factory_bot (6.2.1)
       activesupport (>= 5.0.0)
+    ffaker (2.23.0)
     globalid (1.1.0)
       activesupport (>= 5.0)
     i18n (1.14.1)
@@ -210,6 +211,7 @@ DEPENDENCIES
   bootsnap
   debug
   factory_bot
+  ffaker
   importmap-rails
   jbuilder
   pg (~> 1.1)

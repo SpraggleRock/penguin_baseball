@@ -15,8 +15,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_18_220950) do
   enable_extension "plpgsql"
 
   create_table "penguins", force: :cascade do |t|
+    t.string "name"
+    t.bigint "team_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["team_id"], name: "index_penguins_on_team_id"
   end
 
   create_table "plays", force: :cascade do |t|
@@ -25,6 +28,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_18_220950) do
   end
 
   create_table "teams", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

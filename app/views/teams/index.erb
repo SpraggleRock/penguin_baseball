@@ -1,0 +1,7 @@
+<container>
+	<ul>
+		<% @teams.each do |team| %>
+		<li><%= link_to team.name.titleize, team_path(team.id) %></li>
+		<% end %>
+	</ul>
+<container>

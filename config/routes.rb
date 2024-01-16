@@ -6,4 +6,5 @@ Rails.application.routes.draw do
 
   root "game#index"
   resources :game, only: [:new]
+  resources :teams, only: [:index, :show]
 end
