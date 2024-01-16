@@ -1,7 +1,7 @@
 <container>
 	<h1 class=""> Welcome to Penguin Baseball! </h1>
   <p class > click here to start a game:</p>
-  <p><button class='btn-primary'> Start!</button></p>
+  <p><%= link_to 'Start!', new_game_path, class: 'btn-primary' %></p>
 
   <div id="gameoutput">
   </div>

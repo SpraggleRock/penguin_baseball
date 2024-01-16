@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   root "game#index"
+  resources :game, only: [:new]
 end
