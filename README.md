@@ -6,6 +6,8 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
+install: Ruby 3.0.2
+postgresql@15
 
 * System dependencies
 
