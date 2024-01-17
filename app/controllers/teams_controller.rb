@@ -8,4 +8,5 @@ class TeamsController < ApplicationController
 		team = Team.find(params[:id])
 		@penguins = team.penguins
 	end
+
 end
