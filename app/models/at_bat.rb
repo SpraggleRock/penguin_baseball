@@ -13,10 +13,10 @@ class AtBat
 		@strikes = 0
 		@balls = 0
 		@hit = 0
-		@simulation_text = ''
 	end
 
 	def simulate
+		@simulation_text = ''
 		until at_bat_ended?
 			throw_a_pitch
 		end
@@ -29,9 +29,10 @@ class AtBat
 
 	def throw_a_pitch
 		if pitch_is_a_strike?
-			@simulation_text += "#{@pitcher.name} throws a strike! \b"
+			@simulation_text += "#{@pitcher.name} throws a strike! \n"
 			swing(true)
 		else
+			@simulation_text += "#{@pitcher.name} throws a ball! \n"
 			swing(false)
 		end
 	end
@@ -48,7 +49,7 @@ class AtBat
 	end
 
 	def batter_hits_the_ball?(modifier)
-		[true,false,modifier].sample
+		[true,false,false,modifier].sample
 	end
 
 	def batter_hits
@@ -56,12 +57,12 @@ class AtBat
 		# for instance: add_simulation_text("text string")
 		# it should format output consistently
 		@hit = 1
-		@simulation_text += "#{@batter.name} gets a hit!" 
+		@simulation_text += "#{@batter.name} gets a hit!\n" 
 	end
 
 	def batter_misses
 		# TODO find a gem to convert numbers to "one" "two" "three"
-		@simulation_text += "#{@batter.name} misses. Strike #{@strikes}" 
+		@simulation_text += "#{@batter.name} misses. Strike #{@strikes}!\n" 
 	end
 
 end
